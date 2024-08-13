@@ -43,7 +43,7 @@ Or, if scripts are installed, simply:
 ```bash
 pdu --sample-rate=44100 patch.pd file1.wav file2.flac
 ```
-You can use [find]() and [xargs]() to load all files matching a pattern:
+You can use find and xargs to load all files matching a pattern:
 ```bash
 find sounds -ipath '*soft*' | xargs -0 pdu load_audio --sample-rate=96000 patch.pd
 ```
