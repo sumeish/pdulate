@@ -1,6 +1,6 @@
 # Pdulate
 
-An incomplete and probably buggy library for manipulating Pure Data files, made to automate repetitive boring organizational tasks. Scripts utilizing this library are included, serving as examples, but they can also be installed and used as shown bellow.
+An incomplete and probably buggy library for manipulating Pure Data files, made to automate repetitive boring organizational tasks. Scripts utilizing this library are included, serving as examples, but they can also be installed and used as shown below.
 
 ## Installation
 ```bash
@@ -28,11 +28,11 @@ Currently two scripts are included:
 
 ### Channels
 
-[scripts/channels.py]() takes a path to a Pure Data patch and converts all used \[dac~\] (with no arguments) objects scattered throughout your patch into properly enumerated ones, transforming your easy-to-sketch patch, into a clear, easy-to-mix, suitable for transfer (e.g. through Pipewire) patch. If some \[dac~\] objects do have arguments, the enumeration will start above it to avoid interference.
+[scripts/channels.py](scripts/channels.py) takes a path to a Pure Data patch and converts all used \[dac~\] (with no arguments) objects scattered throughout your patch into properly enumerated ones, transforming your easy-to-sketch patch, into a clear, easy-to-mix, suitable for transfer (e.g. through Pipewire) patch. If some \[dac~\] objects do have arguments, the enumeration will start above it to avoid interference.
 
 ### Load_audio
 
-[load_audio]() takes a path to a Pure Data patch and one or more paths to audio files (wav, aiff, flac, ogg and mp3 are all accepted) and directories containing them. It adds all the audio files to the specified patch or the newly create one. Optionally you can specify a sample rate for conversion. 
+[scripts/load_audio.py](scripts/load_audio.py) takes a path to a Pure Data patch and one or more paths to audio files (wav, aiff, flac, ogg and mp3 are all accepted) and directories containing them. It adds all the audio files to the specified patch or the newly create one. Optionally you can specify a sample rate for conversion. 
 
 For example:
 
@@ -41,7 +41,7 @@ python scripts/load_audio.py --sample-rate=44100 patch.pd file1.wav file2.flac
 ```
 Or, if scripts are installed, simply:
 ```bash
-pdu --sample-rate=44100 patch file1.wav file2.flac
+pdu --sample-rate=44100 patch.pd file1.wav file2.flac
 ```
 You can use [find]() and [xargs]() to load all files matching a pattern:
 ```bash
